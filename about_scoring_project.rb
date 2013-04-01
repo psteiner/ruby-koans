@@ -30,7 +30,7 @@ require File.expand_path(File.dirname(__FILE__) + '/edgecase')
 # Your goal is to write the score method.
 
 def score(dice)
-  # You need to write this method
+  # Also see http://stackoverflow.com/questions/6738715/ruby-koans-182-refactor-help
   #
   score = 0
   die_count = [0,0,0,0,0,0]
