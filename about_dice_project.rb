@@ -6,6 +6,22 @@ require File.expand_path(File.dirname(__FILE__) + '/edgecase')
 #   code ...
 # end
 
+class DiceSet
+  attr_reader :values 
+
+  # see http://stackoverflow.com/questions/8404405/same-random-number-ruby
+  # explains that using an instance variable for @values always returns
+  # the same set of numbers each time roll() is called because as an 
+  # instance var @values is always the same array object
+  def roll(times)
+    @values = []
+    times.times do |x|
+      @values << rand(6) + 1
+    end
+  end
+
+end
+
 class AboutDiceProject < EdgeCase::Koan
   def test_can_create_a_dice_set
     dice = DiceSet.new
