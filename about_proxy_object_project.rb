@@ -25,6 +25,7 @@ class Proxy
     @messages << name
     @object.send(name, *args)
   end
+  
 end
 
 # The proxy object should pass the following Koan:
