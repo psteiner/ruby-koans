@@ -25,6 +25,14 @@ class Proxy
     @messages << name
     @object.send(name, *args)
   end
+
+  def called?(name)
+    @messages.include?(name)
+  end
+
+  def number_of_times_called(name)
+   @messages.count(name) 
+  end
   
 end
 
